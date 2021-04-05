@@ -1,19 +1,28 @@
 import React from 'react';
+import './Homepage.css'
 import Cards from '../Cards/Cards';
+import Navigations from '../Navigations/Naviagations';
 import bookImg from './../../Images/books/image 19.png'
 
 const Homepage = () => {
     const bookInfo = {
-        name: 'umar',
+        name: 'Java Script everywhere',
         author: 'anyone',
         image: bookImg
     }
     
     return (
-        <div>
-            <h3>this is homepagejs</h3>
+        <>
+            <Navigations></Navigations>
+            <section className="cardShowcase">
             <Cards bookInfo = {bookInfo}></Cards>
-        </div>
+            <Cards bookInfo = {bookInfo}></Cards>
+            <Cards bookInfo = {bookInfo}></Cards>
+            <Cards bookInfo = {bookInfo}></Cards>
+            <Cards bookInfo = {bookInfo}></Cards>
+            <Cards bookInfo = {bookInfo}></Cards>
+            </section>
+        </>
     );
 };
 

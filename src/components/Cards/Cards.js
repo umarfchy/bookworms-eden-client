@@ -7,9 +7,11 @@ const Cards = (props) => {
         <div>
             <div className='cardMain'>
                 <div className='cardDesc'>
-                    <img src={image} alt="" />
+                    <img src={image} alt="" className="cardImg"/>
+                    <div className='cardDesc'>
                     <h3>{name}</h3>
                     <p>{author}</p>
+                    </div>
                 </div>
                 <div className='cardPrice'>
                     <p>$500</p>
