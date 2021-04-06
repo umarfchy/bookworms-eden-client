@@ -5,46 +5,53 @@ const ManageBooks = () => {
     return (
         <div>
             <h3>Add Book</h3>
-            <tr>
-                <th>Random header</th>
-                <th>Random header</th>
-                <th>Random header</th>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
-            <tr>
-                <td>Random data </td>
-                <td>Random data</td>
-                <td>Random data</td>
-            </tr>
+            <table className="styled-table">
+                
+                <thead>
+                <tr>
+                    <th>Random header</th>
+                    <th>Random header</th>
+                    <th>Random header</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>   
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                <tr>
+                    <td>Random data </td>
+                    <td>Random data</td>
+                    <td>Random data</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     );
 };
