@@ -18,7 +18,7 @@ const AddBook = () => {
         }
 
         //sending book info to the backend server
-        const databaseUrl = `http://localhost:5000/addBook`
+        const databaseUrl = `https://blueberry-tart-01004.herokuapp.com/addBook`
         fetch(databaseUrl, {
             method: "POST",
             headers: { 'Content-Type': 'application/json'},
