@@ -7,6 +7,8 @@ const AddBook = () => {
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imgUrl, setImgUrl] = useState(null);
+    
+    //actions on submitting the form
     const onSubmit = data => {
         const bookData = {
             bookName: data.bookName,
@@ -14,16 +16,23 @@ const AddBook = () => {
             price: data.price,
             imgUrl: imgUrl
         }
-        console.log(bookData);
+        const databaseUrl = `http://localhost:5000/addBook`
+        fetch(databaseUrl, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(bookData)
+        })
+        .then(res => console.log('server res', res))
+        .catch(err => console.log(err))
     }
     
 
     const handleImageUpload = event =>{
-        console.log(event.target.files[0]);
         const imageData = new FormData();
         imageData.set('key', 'cf51017bd5120601f73b9b13098c1644');
         imageData.append('image', event.target.files[0])
 
+        // sending img data to server and getting live url
         axios.post('https://api.imgbb.com/1/upload', imageData)
         .then( function (response){
             const imgLiveUrl = response.data.data.display_url;
