@@ -16,13 +16,16 @@ const AddBook = () => {
             price: data.price,
             imgUrl: imgUrl
         }
+
+        //sending book info to the backend server
         const databaseUrl = `http://localhost:5000/addBook`
         fetch(databaseUrl, {
             method: "POST",
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(bookData)
         })
-        .then(res => console.log('server res', res))
+        .then(res => res.json())
+        .then(resData => console.log('Following book info is added to the server : ', resData.ops[0]))
         .catch(err => console.log(err))
     }
     
