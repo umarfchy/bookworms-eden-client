@@ -7,9 +7,9 @@ import Homepage from './components/Homepage/Homepage';
 function App() {
   return (
     <div className="App">
-      {/* <Homepage></Homepage> */}
+      <Homepage></Homepage>
       {/* <AdminArea></AdminArea> */}
-      <AddBook></AddBook>
+      {/* <AddBook></AddBook> */}
     </div>
   );
 }

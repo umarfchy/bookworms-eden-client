@@ -2,7 +2,7 @@ import React from 'react';
 import './Cards.css'
 
 const Cards = (props) => {
-    const {image, name, author} = props.bookInfo;
+    const {image, name, author, price} = props.bookInfo;
     return (
         <div>
             <div className='cardMain'>
@@ -14,7 +14,7 @@ const Cards = (props) => {
                     </div>
                 </div>
                 <div className='cardPrice'>
-                    <p>$500</p>
+                    <p>${price}</p>
                     <button className='cardBuyNow'>Buy Now</button>
                 </div>
             </div>
