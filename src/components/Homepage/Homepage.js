@@ -4,7 +4,6 @@ import Cards from '../Cards/Cards';
 import Navigations from '../Navigations/Naviagations';
 import { UserContext } from '../../App';
 
-
 const Homepage = () => {
     const [user, setUser] = useContext(UserContext);
     const [bookData, setBookData] = useState([]);
@@ -18,7 +17,7 @@ const Homepage = () => {
 
     return (
         <>
-            <Navigations loggedUserName={loggedUserName}></Navigations>
+            <Navigations loggedUserName={user.name}></Navigations>
             <section className="cardShowcase">
             {
                 bookData.map(entry => <Cards bookInfo={entry}/>)

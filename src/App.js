@@ -4,7 +4,8 @@ import Checkout from './components/Checkout/Checkout';
 import Homepage from './components/Homepage/Homepage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginFirebase from './components/LoginFirebase/LoginFirebase';
-import { createContext} from 'react';
+import { createContext, useState} from 'react';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -27,12 +28,12 @@ function App() {
           <Route path='/login'>
             <LoginFirebase></LoginFirebase>
           </Route>
-          <Route path='/admin'>
+          <PrivateRoute path='/admin'>
             <AdminArea></AdminArea>
-          </Route>
-          <Route path='/checkout'>
+          </PrivateRoute>
+          <PrivateRoute path='/checkout'>
             <Checkout></Checkout>
-          </Route>
+          </PrivateRoute>
           <Route path='/*'>
           <div>
             <h1>Nothing was found</h1>
