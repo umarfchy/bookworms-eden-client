@@ -1,0 +1,14 @@
+.formShowcase > label {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    margin: 1.2rem;
+    /* padding: 1.2rem; */
+}
+
+
+.addProductSubmitBtn{
+    display: block;
+    margin: 0 auto;
+
+}

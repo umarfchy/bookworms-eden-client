@@ -44,23 +44,29 @@ const AddBook = () => {
         .catch(err => console.log(err))
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="bookName">Add Book</label>
-            <br/>
-            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName")} />
-            <br/>
-            <label htmlFor="authorName">Add Author</label>
-            <br/>
-            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName")} />
-            <br/>
-            <label htmlFor="price">Add Price</label>
-            <br/>
-            <input name='price' type="number" placeholder='Enter Price' {...register("price")} />
-            <br/>
-            <input name='uploadedImage' type='file' onChange={handleImageUpload} />
-            <br/>
-            <input type="submit" />
+        //adds book to db on submit
+        <div >
+        <h3>Add Book</h3>
+        <form className='formShowcase' onSubmit={handleSubmit(onSubmit)}>
+            <label htmlFor="bookName">Book Name
+            {/* <br/> */}
+            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName")} /></label>
+            {/* <br/> */}
+            <label htmlFor="authorName">Author Name
+            {/* <br/> */}
+            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName")} /></label>
+            {/* <br/> */}
+            <label htmlFor="price">Add Price
+            {/* <br/> */}
+            <input name='price' type="number" placeholder='Enter Price' {...register("price")} /></label>
+            {/* <br/> */}
+            <label htmlFor="uploadImage">Add Book Cover Photo
+            {/* <br/> */}
+            <input name='uploadedImage' type='file' onChange={handleImageUpload} /></label>
+            {/* <br/> */}
+            <input className='addProductSubmitBtn' type="submit" />
         </form>
+        </div>
     );
 };
 
