@@ -4,6 +4,7 @@ import AdminArea from './components/AdminArea/AdminArea';
 import Checkout from './components/Checkout/Checkout';
 import Homepage from './components/Homepage/Homepage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import LoginFirebase from './components/LoginFirebase/LoginFirebase';
 
 function App() {
   return (
@@ -12,6 +13,9 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Homepage></Homepage>
+          </Route>
+          <Route path='/login'>
+            <LoginFirebase></LoginFirebase>
           </Route>
           <Route path='/admin'>
             <AdminArea></AdminArea>
