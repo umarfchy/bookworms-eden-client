@@ -53,18 +53,18 @@ const AddBook = () => {
         <h3 style={{textAlign: 'center', marginTop:"1.2rem"}}>Add Book</h3>
         <form className='formShowcase' onSubmit={handleSubmit(onSubmit)}>
             <label htmlFor="bookName">Book Name</label>
-            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName")} />
+            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName", { required: true })} />
             
             <label htmlFor="authorName">Author Name</label>
-            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName")} />
+            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName", { required: true })} />
             
             <label htmlFor="price">Add Price</label>
-            <input name='price' type="number" placeholder='Enter Price' {...register("price")} />
+            <input name='price' type="number" placeholder='Enter Price' {...register("price", { required: true })} />
             
             <label htmlFor="uploadImage">Add Book Cover Photo</label>
             <input name='uploadedImage' type='file' onChange={handleImageUpload} />
             
-            <input className='addProductSubmitBtn' type="submit" />
+            <input id='addProductSubmitBtn' type="submit" />
         </form>
         </div>
     );

@@ -3,15 +3,22 @@
     grid-template-columns: repeat(1, 1fr);
     place-items: center;
     margin: 1.2rem;
+    font-size: 1.5rem;
 }
+
 
 .formShowcase > label{
     margin-left: 1.2rem ;
     margin-top: 1.2rem;
 }
 
+.formShowcase > input{
+    width: 20rem;
+    height: 2rem;
+}
 
-.addProductSubmitBtn{
+#addProductSubmitBtn{
     display: block;
+    padding: 0.2rem;
     margin: 1.2rem auto;
 }

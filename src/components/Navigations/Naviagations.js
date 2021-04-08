@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navigations.css'
 
 const Naviagations = () => {
@@ -8,10 +9,11 @@ const Naviagations = () => {
             <div className='brandTitle'>Bookworm's Eden</div>
             <div className='navbarLinks'>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Destination</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/order">Orders</Link></li>
+                    <li><Link to="/admin">Admin</Link></li>
+                    <li><Link to="#">Deals</Link></li>
+                    <li><Link to="#">Log in</Link></li>
                 </ul>
             </div>
         </nav>
