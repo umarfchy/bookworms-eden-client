@@ -18,7 +18,7 @@ const Checkout = () => {
                 <tbody>
                     <tr>
                     <td>Description</td>
-                    <td>Quantity</td>
+                    <td>1</td>
                     <td>Price</td>
                     </tr>
                 </tbody>
