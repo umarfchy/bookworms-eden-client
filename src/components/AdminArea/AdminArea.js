@@ -4,7 +4,7 @@ import ManageBooks from '../ManageBooks/ManageBooks';
 import editIcon from './../../Images/icons/edit 1.png'
 import gridIcon from './../../Images/icons/grid 1.png'
 import plusIcon from './../../Images/icons/plus 1.png'
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import AddBook from '../AddBook/AddBook';
 
 const AdminArea = () => {
@@ -24,6 +24,7 @@ const AdminArea = () => {
                     <img src={gridIcon} alt=""/> Add Book</li>
                 <li >
                     <img src={plusIcon} alt=""/> Edit Book</li>
+                <li> <Link to='/'>Home</Link></li>
             </ul>
             </div>
             <div className="rightShowcase">

@@ -16,6 +16,9 @@ function App() {
           <Route path='/admin'>
             <AdminArea></AdminArea>
           </Route>
+          <Route path='/checkout'>
+            <Checkout></Checkout>
+          </Route>
           <Route path='/*'>
           <div>
             <h1>Nothing was found</h1>
