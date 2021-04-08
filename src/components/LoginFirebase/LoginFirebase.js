@@ -1,18 +1,12 @@
 import React, { useContext, useState} from 'react';
 import './LoginFirebase.css'
 import googleIcon from './../../Images/icons/google_logo.svg'
-// import { UserContext } from '../../App';
 import { useHistory, useLocation } from 'react-router';
 import { handleGoogleLogin, handleSignOut, initLoginFramework } from '../../loginManager';
+import { UserContext } from '../../App';
 
 const LoginFirebase = () => {
-
-    const [user, setUser] = useState({
-        isSignedIn: false,
-        name:'',
-        email:'',
-        password:''
-    });
+    const [user, setUser] = useContext(UserContext);
     const history = useHistory();
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };

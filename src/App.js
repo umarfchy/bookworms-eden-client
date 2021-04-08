@@ -1,14 +1,24 @@
 import './App.css';
-import AddBook from './components/AddBook/AddBook';
 import AdminArea from './components/AdminArea/AdminArea';
 import Checkout from './components/Checkout/Checkout';
 import Homepage from './components/Homepage/Homepage';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import LoginFirebase from './components/LoginFirebase/LoginFirebase';
+import { createContext} from 'react';
+
+export const UserContext = createContext();
 
 function App() {
+  const [user, setUser] = useState({
+    isSignedIn: false,
+    name:'',
+    email:'',
+    password:''
+});
+
   return (
     <div className="App">
+      <UserContext.Provider value= {[user, setUser]}>
       <Router >
         <Switch>
           <Route exact path='/'>
@@ -30,6 +40,7 @@ function App() {
           </Route>
         </Switch>
       </Router>
+      </UserContext.Provider>
     </div>
   );
 }

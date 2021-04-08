@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Homepage.css'
 import Cards from '../Cards/Cards';
 import Navigations from '../Navigations/Naviagations';
+import { UserContext } from '../../App';
+
 
 const Homepage = () => {
+    const [user, setUser] = useContext(UserContext);
     const [bookData, setBookData] = useState([]);
 
     useEffect(()=>{
@@ -15,7 +18,7 @@ const Homepage = () => {
 
     return (
         <>
-            <Navigations></Navigations>
+            <Navigations loggedUserName={loggedUserName}></Navigations>
             <section className="cardShowcase">
             {
                 bookData.map(entry => <Cards bookInfo={entry}/>)
