@@ -5,7 +5,7 @@ import './AddBook.css'
 
 const AddBook = () => {
 
-    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [imgUrl, setImgUrl] = useState(null);
     
     //actions on submitting the form
@@ -30,8 +30,9 @@ const AddBook = () => {
             console.log('Following book info is added to the server : ', resData.ops[0])
         })
         .catch(err => console.log(err))
+        
+        reset();
     }
-    
 
     const handleImageUpload = event =>{
         const imageData = new FormData();
