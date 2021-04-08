@@ -25,7 +25,10 @@ const AddBook = () => {
             body: JSON.stringify(bookData)
         })
         .then(res => res.json())
-        .then(resData => console.log('Following book info is added to the server : ', resData.ops[0]))
+        .then(resData => {
+            alert("Submission complete");
+            console.log('Following book info is added to the server : ', resData.ops[0])
+        })
         .catch(err => console.log(err))
     }
     
@@ -46,24 +49,20 @@ const AddBook = () => {
     return (
         //adds book to db on submit
         <div >
-        <h3>Add Book</h3>
+        <h3 style={{textAlign: 'center', marginTop:"1.2rem"}}>Add Book</h3>
         <form className='formShowcase' onSubmit={handleSubmit(onSubmit)}>
-            <label htmlFor="bookName">Book Name
-            {/* <br/> */}
-            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName")} /></label>
-            {/* <br/> */}
-            <label htmlFor="authorName">Author Name
-            {/* <br/> */}
-            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName")} /></label>
-            {/* <br/> */}
-            <label htmlFor="price">Add Price
-            {/* <br/> */}
-            <input name='price' type="number" placeholder='Enter Price' {...register("price")} /></label>
-            {/* <br/> */}
-            <label htmlFor="uploadImage">Add Book Cover Photo
-            {/* <br/> */}
-            <input name='uploadedImage' type='file' onChange={handleImageUpload} /></label>
-            {/* <br/> */}
+            <label htmlFor="bookName">Book Name</label>
+            <input name='bookName' type='text' placeholder='Enter Name' {...register("bookName")} />
+            
+            <label htmlFor="authorName">Author Name</label>
+            <input name='authorName' type='text' placeholder='Enter Name' {...register("authorName")} />
+            
+            <label htmlFor="price">Add Price</label>
+            <input name='price' type="number" placeholder='Enter Price' {...register("price")} />
+            
+            <label htmlFor="uploadImage">Add Book Cover Photo</label>
+            <input name='uploadedImage' type='file' onChange={handleImageUpload} />
+            
             <input className='addProductSubmitBtn' type="submit" />
         </form>
         </div>
