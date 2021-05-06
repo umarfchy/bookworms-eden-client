@@ -18,7 +18,7 @@ const Homepage = () => {
     return (
         <>
             <Navigations loggedUserName={user.name}></Navigations>
-            <section className="cardShowcase">
+            <section className="row mx-auto container">
             {
                 bookData.map(entry => <Cards bookInfo={entry}/>)
             }
