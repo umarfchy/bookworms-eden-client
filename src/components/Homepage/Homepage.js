@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './Homepage.css'
 import Cards from '../Cards/Cards';
 import Navigations from '../Navigations/Naviagations';
 import { UserContext } from '../../App';
