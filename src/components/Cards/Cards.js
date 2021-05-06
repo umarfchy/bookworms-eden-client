@@ -1,5 +1,4 @@
 import React from "react";
-// import './Cards.css'
 import { Card, Button } from "react-bootstrap";
 
 const Cards = props => {
@@ -16,9 +15,22 @@ const Cards = props => {
         src={imgUrl}
       />
       <Card.Body>
-        <div style={{ height: "7rem" }} className="text-center">
-          <Card.Title>{bookName}</Card.Title>
-          <Card.Text>{authorName}</Card.Text>
+        <div style={{ height: "7rem" }} className="text-justify">
+          <Card.Title
+            style={{
+              fontSize: "1.1rem",
+            }}
+          >
+            {bookName}
+          </Card.Title>
+          <Card.Text
+            style={{
+              fontSize: "0.9rem",
+              color: "gray",
+            }}
+          >
+            {authorName}
+          </Card.Text>
         </div>
         <div className="d-flex justify-content-between align-items-end">
           <h5>${price}</h5>

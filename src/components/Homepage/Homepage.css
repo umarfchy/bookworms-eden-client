@@ -1,7 +1,0 @@
-.cardShowcase{
-    margin-top: 1rem;
-    display: grid;
-    place-items: center;
-    gap: 1rem;
-    grid-template-columns: repeat(3,1fr);
-}
