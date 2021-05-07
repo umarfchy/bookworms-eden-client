@@ -29,9 +29,9 @@ function App() {
             <Route path="/login">
               <LoginFirebase></LoginFirebase>
             </Route>
-            <Route path="/admin">
+            <PrivateRoute path="/admin">
               <AdminArea></AdminArea>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute path="/checkout">
               <Checkout></Checkout>
             </PrivateRoute>
